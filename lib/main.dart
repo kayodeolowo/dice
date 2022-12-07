@@ -21,25 +21,26 @@ void main() {
 }
 
 class Dicepage extends StatelessWidget {
-  const Dicepage({Key? key}) : super(key: key);
+  Dicepage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var leftDice = 4;
+
     return Center(
       child: Row(
         children: <Widget>[
           Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(14.0),
-              child: TextButton(
-                onPressed: () {},
-                child: Image.asset("images/dice1.png"),
-              ),
+            child: TextButton(
+              onPressed: () {
+                print("object");
+              },
+              child: Image.asset("images/dice$leftDice.png"),
             ),
           ),
           Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(14.0),
+            child: TextButton(
+              onPressed: () {},
               child: Image.asset("images/dice2.png"),
             ),
           ),
